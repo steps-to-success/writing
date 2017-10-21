@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  changePage: () => push('/about-us')
+  changePage: () => push('/learning-objectives')
 }, dispatch)
 
 export default connect(

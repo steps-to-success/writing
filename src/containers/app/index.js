@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 import Home from '../home'
-import AllLearningObjectives from '../learningObjectives'
+import LearningObjectives from '../learningObjectives/LearningObjectives'
 
 const App = () => (
   <div>
@@ -12,8 +12,10 @@ const App = () => (
     </header>
 
     <main>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/learning-objectives" component={AllLearningObjectives} />
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/learning-objectives' component={LearningObjectives} />
+      </Switch>
     </main>
   </div>
 )

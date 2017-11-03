@@ -6,7 +6,7 @@ import rootReducer from './modules'
 
 export const history = createHistory()
 
-const initialState = {}
+const initialState = {addSteps: 'hello'}
 const enhancers = []
 const middleware = [
   thunk,

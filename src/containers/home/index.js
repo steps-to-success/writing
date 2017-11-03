@@ -1,23 +1,32 @@
-import React from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { toggleStep, addSteps } from '../../actions/index'
+import Lo from '../learningObjectives/Lo'
+import React from 'react'
+import {Switch, Route} from 'react-router-dom'
 
-const Home = props => (
-  <div>
-    <h1>Home</h1>
-
-  </div>
+const Home = () => (
+  <div>Home</div>
 )
 
-const mapStateToProps = state => ({
-})
+const mapStateToProps = (state) => {  
+  console.log('state mapStateToProps:', state)
+  return(
+
+  {
+  addSteps: state.addSteps,
+  completedSteps: state.toggleStep.completed
+})}
+
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  changePage: () => push('/learning-objectives')
+  toggleStep,
+  addSteps,
+  changePage: () => push('/learning-objectives'),
 }, dispatch)
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home)
+)(Lo)

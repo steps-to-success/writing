@@ -1,7 +1,7 @@
 import React from 'react'
 import TargetsApi from '../../targetsApi'
 import Steps from './Steps'
-import {toggleStep, addSteps} from '../../actions/index' // ../../reducers/index instead?
+import {toggleStep, addSteps} from '../../reducers/index' // ../../actiono/index instead?
 
 const Lo = (props) => {
   console.log('props in lo::', props)

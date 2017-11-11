@@ -1,3 +1,6 @@
+export const ADD_STEPS = 'ADD_STEPS';
+export const TOGGLE_STEP = 'TOGGLE_STEP';
+
 export const addSteps = (lO) => {
     return dispatch => {
         dispatch({

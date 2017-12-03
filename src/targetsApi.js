@@ -1,22 +1,31 @@
-const TargetsApi = {
-    learningObjectives : [ 
+
+  const TargetsApi = [
     {
-      id : 1, 
-      text: 'Write an introduction', 
-      stepsToSuccess : ['Describe characters', 'Describe setting', 'Hook in the reader']
+      lO: "Write an introduction",
+      stepsToSuccess: ["Describe the setting", "Describe the character"]
+    },
+    {
+      lO: "Write a build up",
+      stepsToSuccess: ["Include action", "Use short sentences"]
     },
       {
-      id : 2, 
-      text: 'Write a build up', 
-      stepsToSuccess : ['Build tension', 'Describe the action', 'Write in the past']
+      lO: "Write an ending",
+      stepsToSuccess: ["Solve the problem", "Think about feelings"]
+    },
+    {
+        lO: "Describe the character",
+      stepsToSuccess: ["Describe the setting", "Describe the character"]
+    },
+    {
+      lO: "Use personification",
+      stepsToSuccess: ["Include action", "Use short sentences"]
+    },
+      {
+      lO: "Write a poem",
+      stepsToSuccess: ["Solve the problem", "Think about feelings"]
     }
-    ],
-    all : function() { return this.learningObjectives },
-    get : function(num) {
-      const isLo = lO => lO.id === num;
-      return this.learningObjectives.find(isLo);
-    }
+  ]
     
-  }
 
   export default TargetsApi
+ 

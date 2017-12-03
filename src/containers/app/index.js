@@ -1,23 +1,24 @@
 
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Home from '../home'
-import LearningObjectives from '../learningObjectives/LearningObjectives'
+import Search from '../components/Search'
+import StepsToSuccess from '../components/StepsToSuccess'
 
-const App = () => (
-  <div>
-    <header>
-      <Link to="/">Home</Link>
-      <Link to="/learning-objectives">Learning Objectives</Link>
-    </header>
-
-    <main>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/learning-objectives' component={LearningObjectives} />
-      </Switch>
-    </main>
-  </div>
-)
+class App extends React.Component{
+  render(){
+    return(
+    <Router>
+        <div className="container">
+       <ul>
+         <li><Link to="/">Home</Link></li>
+       </ul>
+      <Route path="/steps-to-success" render={() => <StepsToSuccess state={this.state} />} />    
+      <Route exact path="/" component={Search} /> 
+        </div>
+    </Router>
+    )
+  }
+}
 
 export default App

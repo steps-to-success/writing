@@ -4,7 +4,7 @@ export const TOGGLE_STEP = 'TOGGLE_STEP';
 export const addSteps = (lO) => {
     return dispatch => {
         dispatch({
-            type: 'ADD_STEPS',
+            type: ADD_STEPS,
             id: lO.id
         })
     } 
@@ -14,7 +14,7 @@ export const toggleStep = (lO) => {
     console.log('here toggleStep called')
     return dispatch => {
         dispatch({
-            type: 'TOGGLE_STEP',
+            type: TOGGLE_STEP,
             id: lO.id,
             completed: false
         })

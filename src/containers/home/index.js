@@ -11,9 +11,7 @@ const Home = () => (
 )
 
 const mapStateToProps = (state) => {  
-  console.log('state mapStateToProps:', state)
   return(
-
   {
   addSteps: state.addSteps,
   completedSteps: state.toggleStep.completed
